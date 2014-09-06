@@ -1,0 +1,18 @@
+<ion-view title="Friends">
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.username}}">
+        {{friend.username}}
+      </ion-item>
+    </ion-list>
+
+      <label>Name:</label>
+      <!-- this input field synchronizes directly to the name attribute in Firebase! -->
+      <input type="text" ng-model="profile.username" />
+      <label>Email:</label>
+      <input type="text" ng-model="profile.email" />
+
+      <button ng-click="button()" class="button button-block">Find</button>
+
+  </ion-content>
+</ion-view>

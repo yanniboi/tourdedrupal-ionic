@@ -1,0 +1,11 @@
+<ion-view title="Dashboard">
+  <ion-content class="padding">
+    <h1>Dash</h1>
+      <div ng-show="showMap" class="static-map">
+          <img src="http://maps.googleapis.com/maps/api/staticmap?center={{current.lat}},{{current.lng}}&zoom=12&size=400x400&markers=label:S|color:green|{{current.lat}},{{current.lng}}">
+      </div>
+      <button ng-click="updateCurrent()" class="button button-block">Where am I?</button>
+      <button ng-show="!tracking" ng-click="startTracking()" class="button button-block">Start tracking</button>
+      <button ng-show="tracking" ng-click="stopTracking()" class="button button-block">Stop tracking</button>
+  </ion-content>
+</ion-view>
